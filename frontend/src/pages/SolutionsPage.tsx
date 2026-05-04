@@ -208,16 +208,16 @@ const solutions = [
 ];
 
 const overviewCards = [
-  { title: "Automotive IT", desc: "IT systems for vehicle businesses" },
-  { title: "Fleet Technology", desc: "GPS tracking & fleet management" },
-  { title: "Cybersecurity", desc: "Protect your digital infrastructure" },
-  { title: "Software Development", desc: "Custom software solutions" },
-  { title: "Websites", desc: "Professional web presence" },
-  { title: "CRM Systems", desc: "Customer & booking management" },
-  { title: "Automation", desc: "Streamline business workflows" },
-  { title: "Data Reporting", desc: "Dashboards & analytics" },
-  { title: "Cloud & IT", desc: "Cloud infrastructure & support" },
-  { title: "CAD & 3D Support", desc: "Technical drafting & modelling" },
+  { icon: "🚗", title: "Automotive IT", desc: "IT systems for vehicle businesses" },
+  { icon: "🚚", title: "Fleet Technology", desc: "GPS tracking & fleet management" },
+  { icon: "🛡️", title: "Cybersecurity", desc: "Protect your digital infrastructure" },
+  { icon: "💻", title: "Software Development", desc: "Custom software solutions" },
+  { icon: "🌐", title: "Websites", desc: "Professional web presence" },
+  { icon: "📊", title: "CRM Systems", desc: "Customer & booking management" },
+  { icon: "⚙️", title: "Automation", desc: "Streamline business workflows" },
+  { icon: "📈", title: "Data Reporting", desc: "Dashboards & analytics" },
+  { icon: "☁️", title: "Cloud & IT", desc: "Cloud infrastructure & support" },
+  { icon: "🧩", title: "CAD & 3D Support", desc: "Technical drafting & modelling" },
 ];
 
 export default function SolutionsPage() {
@@ -249,6 +249,7 @@ export default function SolutionsPage() {
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
             {overviewCards.map((card) => (
               <div key={card.title} className="flex flex-col items-center text-center p-5 bg-card rounded-xl border border-border hover:border-cyber-red/40 hover:-translate-y-1 transition-all duration-300">
+                <div className="text-2xl mb-2">{card.icon}</div>
                 <div className="text-sm font-semibold text-foreground">{card.title}</div>
                 <div className="text-xs text-muted-foreground mt-1">{card.desc}</div>
               </div>
