@@ -98,7 +98,6 @@ const navCategories: NavCategory[] = [
       { label: "CAD & 3D Modelling Support",       to: "/solutions#cad-3d" },
     ],
     mostRequested: [
-      { label: "IT Audit",          to: "/solutions#cybersecurity" },
       { label: "Security Setup",    to: "/solutions#cybersecurity" },
       { label: "Fleet Tracking",    to: "/solutions#fleet-technology" },
       { label: "Book Consultation", to: "/book-consultation" },
@@ -216,10 +215,7 @@ function MegaMenu({ onClose }: { onClose: () => void }) {
               </ul>
             </div>
             <div style={{ minWidth: 240 }}>
-              <p className="mb-5 border-b border-gray-200 pb-2 text-xs font-bold uppercase tracking-widest text-gray-400">
-                Most Requested
-              </p>
-              <ul className="space-y-3">
+              <ul className="space-y-3 mt-10">
                 {activeDropdown.mostRequested.map((link) => (
                   <li key={link.label}>
                     <NavLink

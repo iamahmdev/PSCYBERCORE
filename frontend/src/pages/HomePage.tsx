@@ -45,10 +45,11 @@ const industries = [
 
 const steps = [
   { number: "1", title: "Consultation" },
-  { number: "2", title: "System Design" },
-  { number: "3", title: "Development" },
-  { number: "4", title: "Deployment" },
-  { number: "5", title: "Support" },
+  { number: "2", title: "Analysis" },
+  { number: "3", title: "System Design" },
+  { number: "4", title: "Development" },
+  { number: "5", title: "Deployment" },
+  { number: "6", title: "Support" },
 ];
 
 const whyUs = [

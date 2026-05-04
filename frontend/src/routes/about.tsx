@@ -63,8 +63,7 @@ function AboutPage() {
               <img src={aboutImg} alt="Office / Team Collaboration / Systems Setup" className="w-full h-auto object-cover" />
             </div>
             <div>
-              <span className="text-sm font-semibold tracking-widest uppercase text-cyber-red">Who We Are</span>
-              <h2 className="mt-3 text-3xl sm:text-4xl font-bold text-foreground">Who We Are</h2>
+              <h2 className="text-3xl sm:text-4xl font-bold text-foreground">Who We Are</h2>
               <p className="mt-6 text-muted-foreground leading-relaxed">
                 PScybercore is an automotive-focused IT, cybersecurity and digital solutions company dedicated to helping vehicle-dependent businesses modernize their operations. We work with repair shops, dealerships, fleet operators, transport companies and logistics businesses to design practical technology systems that improve efficiency, organization and decision-making.
               </p>
@@ -114,8 +113,7 @@ function AboutPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
-              <span className="text-sm font-semibold tracking-widest uppercase text-cyber-red">What We Do</span>
-              <h2 className="mt-3 text-3xl sm:text-4xl font-bold text-foreground">What We Do</h2>
+              <h2 className="text-3xl sm:text-4xl font-bold text-foreground">What We Do</h2>
               <p className="mt-6 text-muted-foreground leading-relaxed">
                 We provide a wide range of technology and digital services designed specifically for automotive and transport businesses. Our solutions include IT systems, cybersecurity support, fleet technology, CRM platforms, workflow automation, custom software development and data reporting systems.
               </p>
@@ -133,7 +131,6 @@ function AboutPage() {
       {/* Our Approach */}
       <section className="py-16 bg-secondary">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <span className="text-sm font-semibold tracking-widest uppercase text-cyber-red">Our Approach</span>
           <h2 className="mt-3 text-3xl sm:text-4xl font-bold text-foreground">Our Approach</h2>
           <p className="mt-6 text-muted-foreground leading-relaxed">
             At PScybercore, we follow a structured and practical approach to every project. We begin by understanding the client's operations, identifying inefficiencies and designing solutions tailored to real workflows. From system design to deployment and ongoing support, we ensure that every solution delivers measurable values.
@@ -167,7 +164,6 @@ function AboutPage() {
       <section className="py-16 bg-secondary">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-card rounded-2xl p-10 border border-border">
-            <span className="text-sm font-semibold tracking-widest uppercase text-cyber-red">Our Role</span>
             <h2 className="mt-3 text-2xl sm:text-3xl font-bold text-foreground">Our Role</h2>
             <p className="mt-6 text-muted-foreground leading-relaxed">
               PScybercore operates as a technology and digital solutions provider. We do not function as a vehicle repair shop, dealership, vehicle sales provider, engineering firm, investigation service, locksmith or physical security company.

@@ -24,7 +24,8 @@ export function Footer() {
             <img
               src={logo}
               alt="PSCyberCore"
-              className="h-20 w-auto object-contain"
+              className="h-20 w-40 object-contain"
+              style={{ transform: "scale(1.75)", transformOrigin: "left center" }}
             />
             <p className="mt-5 text-sm leading-relaxed text-gray-600">
               Automotive IT, cybersecurity and digital solutions for modern vehicle businesses.

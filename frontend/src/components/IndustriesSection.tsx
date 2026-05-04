@@ -14,7 +14,6 @@ export function IndustriesSection() {
     <section id="industries" className="py-24 bg-secondary">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-2xl mx-auto mb-12">
-          <span className="text-sm font-semibold tracking-widest uppercase text-cyber-red">Industries We Serve</span>
           <h2 className="mt-3 text-3xl sm:text-4xl font-bold text-foreground">
             Industries We Serve
           </h2>
