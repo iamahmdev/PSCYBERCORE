@@ -19,6 +19,7 @@ const industries = [
   {
     icon: "🔧",
     title: "Repair Shops",
+    tagline: "IT systems for repair shop operations",
     fullTitle: "Repair Shop Technology Solutions",
     description: [
       "Digital systems designed for day-to-day repair shop operations",
@@ -37,6 +38,7 @@ const industries = [
   {
     icon: "🚗",
     title: "Dealerships",
+    tagline: "Digital solutions for vehicle sales & management",
     fullTitle: "Dealership Technology Solutions",
     description: [
       "Digital systems for managing vehicle inventory and sales",
@@ -55,6 +57,7 @@ const industries = [
   {
     icon: "🚚",
     title: "Fleet Operators",
+    tagline: "GPS tracking & fleet management systems",
     fullTitle: "Fleet Operator Solutions",
     description: [
       "Real-time fleet tracking and monitoring systems",
@@ -73,6 +76,7 @@ const industries = [
   {
     icon: "🚛",
     title: "Transport Companies",
+    tagline: "Technology for dispatch & transport operations",
     fullTitle: "Transport Company Solutions",
     description: [
       "Technology systems for managing transport operations",
@@ -91,6 +95,7 @@ const industries = [
   {
     icon: "📦",
     title: "Logistics Businesses",
+    tagline: "Systems for goods movement & supply chain",
     fullTitle: "Logistics Business Solutions",
     description: [
       "Systems designed for managing goods movement and operations",
@@ -109,6 +114,7 @@ const industries = [
   {
     icon: "🚀",
     title: "Mobility & Automotive Startups",
+    tagline: "Tech support for new automotive businesses",
     fullTitle: "Mobility & Automotive Startup Solutions",
     description: [
       "Technology support for new automotive and mobility businesses",
@@ -157,6 +163,7 @@ function IndustriesPage() {
               <div key={ind.title} className="flex flex-col items-center text-center p-5 bg-card rounded-xl border border-border hover:border-cyber-red/40 hover:-translate-y-1 transition-all duration-300">
                 <div className="text-2xl mb-2">{ind.icon}</div>
                 <div className="text-sm font-semibold text-foreground">{ind.title}</div>
+                <div className="text-xs text-muted-foreground mt-1">{ind.tagline}</div>
               </div>
             ))}
           </div>

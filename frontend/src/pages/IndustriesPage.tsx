@@ -9,6 +9,7 @@ const industries = [
     id: "repair-shops",
     icon: "🔧",
     title: "Repair Shops",
+    tagline: "IT systems for repair shop operations",
     fullTitle: "Repair Shop Technology Solutions",
     // Mechanic working in auto repair workshop
     image: "https://images.unsplash.com/photo-1530046339160-ce3e530c7d2f?w=800&q=80",
@@ -30,6 +31,7 @@ const industries = [
     id: "dealerships",
     icon: "🚗",
     title: "Dealerships",
+    tagline: "Digital solutions for vehicle sales & management",
     fullTitle: "Dealership Technology Solutions",
     // Car dealership showroom with vehicles
     image: "https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?w=800&q=80",
@@ -51,6 +53,7 @@ const industries = [
     id: "fleet-operators",
     icon: "🚚",
     title: "Fleet Operators",
+    tagline: "GPS tracking & fleet management systems",
     fullTitle: "Fleet Operator Solutions",
     // Fleet of trucks parked — fleet operations
     image: "https://images.unsplash.com/photo-1519003722824-194d4455a60c?w=800&q=80",
@@ -72,6 +75,7 @@ const industries = [
     id: "transport-companies",
     icon: "🚛",
     title: "Transport Companies",
+    tagline: "Technology for dispatch & transport operations",
     fullTitle: "Transport Company Solutions",
     // Semi trucks on highway — transport operations
     image: "https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=800&q=80",
@@ -93,6 +97,7 @@ const industries = [
     id: "logistics-businesses",
     icon: "📦",
     title: "Logistics Businesses",
+    tagline: "Systems for goods movement & supply chain",
     fullTitle: "Logistics Business Solutions",
     // Warehouse with shelves and logistics operations
     image: "https://images.unsplash.com/photo-1553413077-190dd305871c?w=800&q=80",
@@ -114,6 +119,7 @@ const industries = [
     id: "mobility-startups",
     icon: "🚀",
     title: "Mobility & Automotive Startups",
+    tagline: "Tech support for new automotive businesses",
     fullTitle: "Mobility & Automotive Startup Solutions",
     // Modern startup office with tech team
     image: "https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=800&q=80",
@@ -166,7 +172,9 @@ export default function IndustriesPage() {
                 href={`#${ind.id}`}
                 className="flex flex-col items-center text-center p-5 bg-card rounded-xl border border-border hover:border-cyber-red/40 hover:-translate-y-1 transition-all duration-300"
               >
+                <div className="text-2xl mb-2">{ind.icon}</div>
                 <div className="text-sm font-semibold text-foreground">{ind.title}</div>
+                <div className="text-xs text-muted-foreground mt-1">{ind.tagline}</div>
               </a>
             ))}
           </div>

@@ -125,6 +125,20 @@ function ContactPage() {
           <p className="mt-8 text-center text-sm text-muted-foreground">
             Our team typically responds within 24 hours. For urgent requests, please use the phone number listed above.
           </p>
+
+          {/* Map / Location */}
+          <div className="mt-12 rounded-2xl overflow-hidden border border-border shadow-xl">
+            <iframe
+              title="PSCyberCore Location"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2508.5!2d-114.0435!3d51.0375!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x53716fc3b5b5b5b5%3A0x0!2s219-1210+20+Ave+SE%2C+Calgary%2C+AB+T2G+1M8!5e0!3m2!1sen!2sca!4v1"
+              width="100%"
+              height="400"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
+          </div>
         </div>
       </section>
 
