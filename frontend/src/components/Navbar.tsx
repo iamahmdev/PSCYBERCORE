@@ -221,7 +221,7 @@ function MegaMenu({ onClose }: { onClose: () => void }) {
               </p>
               <ul className="space-y-3">
                 {activeDropdown.mostRequested.map((link) => (
-                  <li key={link.to}>
+                  <li key={link.label}>
                     <NavLink
                       to={link.to}
                       onClick={onClose}
