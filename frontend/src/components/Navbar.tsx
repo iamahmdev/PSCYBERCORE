@@ -386,12 +386,12 @@ export function Navbar() {
         >
           {/* Left — Logo stacked above MENU button */}
           <div className="flex min-w-0 flex-col items-center">
-            <Link to="/" aria-label="PSCyberCore home" className="block" style={{ height: "6rem", width: "12rem" }}>
+            <Link to="/" aria-label="PSCyberCore home" className="block lg:ml-0 -ml-8" style={{ height: "6rem", width: "12rem" }}>
               <img
                 src={logo}
                 alt="PSCyberCore"
                 className="h-24 w-48 cursor-pointer object-contain transition-transform duration-300 hover:scale-105"
-                style={{ transform: "scale(2.0)", transformOrigin: "center", pointerEvents: "none" }}
+                style={{ transform: "scale(2.0)", transformOrigin: "center center", pointerEvents: "none" }}
                 aria-label="PSCyberCore home"
               />
             </Link>
