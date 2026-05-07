@@ -249,7 +249,7 @@ function MobileMenu({ onClose }: { onClose: () => void }) {
       {/* Header */}
       <div className="flex items-center justify-between border-b border-gray-200 px-4 py-3">
         <Link to="/" onClick={onClose} aria-label="PSCyberCore home">
-          <img src={logo} alt="PSCyberCore" className="h-12 w-auto object-contain" />
+          <img src={logo} alt="PSCyberCore" className="h-16 w-auto object-contain" />
         </Link>
         <button
           onClick={onClose}
@@ -382,16 +382,16 @@ export function Navbar() {
       >
         <div
           className="mx-auto flex max-w-screen-2xl items-center justify-between gap-2 px-4 sm:px-6 lg:px-8 xl:px-12 xl:gap-6 2xl:px-16"
-          style={{ minHeight: "3.5rem" }}
+          style={{ minHeight: "4.5rem" }}
         >
           {/* Left — Logo stacked above MENU button */}
           <div className="flex min-w-0 flex-col items-center">
-            <Link to="/" aria-label="PSCyberCore home" className="block" style={{ height: "5rem", width: "10rem" }}>
+            <Link to="/" aria-label="PSCyberCore home" className="block" style={{ height: "6rem", width: "12rem" }}>
               <img
                 src={logo}
                 alt="PSCyberCore"
-                className="h-20 w-40 cursor-pointer object-contain transition-transform duration-300 hover:scale-105"
-                style={{ transform: "scale(1.75)", transformOrigin: "center", pointerEvents: "none" }}
+                className="h-24 w-48 cursor-pointer object-contain transition-transform duration-300 hover:scale-105"
+                style={{ transform: "scale(2.0)", transformOrigin: "center", pointerEvents: "none" }}
                 aria-label="PSCyberCore home"
               />
             </Link>
@@ -424,7 +424,7 @@ export function Navbar() {
           </div>
 
           {/* Right — CTA buttons */}
-          <div className="flex shrink-0 items-center gap-2">
+          <div className="flex shrink-0 items-center gap-2" style={{ marginTop: "-1.5rem" }}>
             {/* Desktop */}
             <a
               href="tel:+18258076307"
