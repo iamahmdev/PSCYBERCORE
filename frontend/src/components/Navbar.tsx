@@ -3,8 +3,8 @@ import {
   ChevronDown,
   ChevronRight,
   Menu,
-  Phone,
   X,
+  PhoneCall,
 } from "lucide-react";
 import { useState, useRef, useEffect, type ReactNode } from "react";
 import logo from "@/assets/logo.png";
@@ -247,16 +247,16 @@ function MobileMenu({ onClose }: { onClose: () => void }) {
   return (
     <div className="fixed inset-0 z-50 flex flex-col bg-white" style={{ overflowY: "auto" }}>
       {/* Header */}
-      <div className="flex items-center justify-between border-b border-gray-200 px-4 py-3">
-        <Link to="/" onClick={onClose} aria-label="PSCyberCore home">
-          <img src={logo} alt="PSCyberCore" className="h-16 w-auto object-contain" />
+      <div className="flex items-center justify-between border-b border-gray-200 px-4 py-2">
+        <Link to="/" onClick={onClose} aria-label="PSCyberCore home" className="-ml-16">
+          <img src={logo} alt="PSCyberCore" className="h-28 w-56 object-contain" />
         </Link>
         <button
           onClick={onClose}
           aria-label="Close menu"
           className="rounded-md p-2 text-gray-600 hover:bg-gray-100"
         >
-          <X className="size-5" />
+          <X className="size-6" />
         </button>
       </div>
 
@@ -267,34 +267,25 @@ function MobileMenu({ onClose }: { onClose: () => void }) {
             {isDropdown(cat) ? (
               <>
                 <button
-                  className="flex w-full items-center justify-between py-3.5 text-left text-sm font-semibold text-gray-900"
+                  className="flex w-full items-center justify-between py-4 text-left text-sm font-bold uppercase text-gray-900"
                   onClick={() => setOpenSection(openSection === cat.id ? null : cat.id)}
                 >
                   <span>{cat.label}</span>
                   <ChevronRight
-                    className={`size-4 shrink-0 text-cyber-red transition-transform duration-200 ${
+                    className={`size-4 shrink-0 transition-transform duration-200 ${
                       openSection === cat.id ? "rotate-90" : ""
                     }`}
                   />
                 </button>
                 {openSection === cat.id && (
-                  <div className="mb-3 space-y-1 rounded-lg border border-cyber-red/10 bg-gray-50 p-3">
-                    <NavLink
-                      to={cat.to}
-                      onClick={onClose}
-                      className="block rounded-md px-3 py-2 text-sm font-bold text-cyber-red hover:bg-cyber-red/10"
-                    >
-                      {cat.label} — Overview
-                    </NavLink>
-                    <div className="my-1 border-t border-gray-200" />
+                  <div className="mb-3 space-y-1 bg-white pl-4">
                     {cat.links.map((link) => (
                       <NavLink
                         key={link.to}
                         to={link.to}
                         onClick={onClose}
-                        className="flex items-center gap-2 rounded-md px-3 py-2 text-sm text-gray-700 hover:bg-cyber-red/10 hover:text-cyber-red"
+                        className="block py-2 text-sm text-gray-700 hover:text-cyber-red"
                       >
-                        <span className="size-1.5 shrink-0 rounded-full bg-cyber-red/40" />
                         {link.label}
                       </NavLink>
                     ))}
@@ -305,7 +296,7 @@ function MobileMenu({ onClose }: { onClose: () => void }) {
               <NavLink
                 to={cat.to}
                 onClick={onClose}
-                className="flex w-full items-center py-3.5 text-left text-sm font-semibold text-gray-900 hover:text-cyber-red"
+                className="flex w-full items-center py-4 text-left text-sm font-bold uppercase text-gray-900 hover:text-cyber-red"
               >
                 {cat.label}
               </NavLink>
@@ -314,14 +305,14 @@ function MobileMenu({ onClose }: { onClose: () => void }) {
         ))}
       </nav>
 
-      {/* Bottom CTA */}
-      <div className="border-t border-gray-200 px-4 py-4 space-y-2">
+      {/* Bottom CTA - 2 buttons with space-y-3 */}
+      <div className="border-t border-gray-200 px-4 py-4 space-y-3">
         <a
           href="tel:+18258076307"
           onClick={onClose}
           className="flex w-full items-center justify-center gap-2 rounded-md bg-cyber-red py-3 text-sm font-bold text-white"
         >
-          <Phone className="size-4" /> Talk to an Expert
+          <PhoneCall className="size-4" /> Talk to an Expert
         </a>
         <a
           href="mailto:info@pscybercore.com"
@@ -378,28 +369,22 @@ export function Navbar() {
 
       <header
         ref={headerRef}
-        className="sticky top-0 z-40 border-b border-border/80 bg-background/88 backdrop-blur-xl supports-[backdrop-filter]:bg-background/78"
+        className="sticky top-0 z-40 border-b border-gray-200 bg-white"
       >
-        <div
-          className="mx-auto flex max-w-screen-2xl items-center justify-between gap-2 px-4 sm:px-6 lg:px-8 xl:px-12 xl:gap-6 2xl:px-16"
-          style={{ minHeight: "4.5rem" }}
-        >
-          {/* Left — Logo stacked above MENU button */}
-          <div className="flex min-w-0 flex-col items-center">
-            <Link to="/" aria-label="PSCyberCore home" className="block lg:ml-0 -ml-8" style={{ height: "6rem", width: "12rem" }}>
+        {/* Desktop Header */}
+        <div className="hidden lg:flex mx-auto max-w-screen-2xl items-center justify-between px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16">
+          {/* Left — Logo + Menu button */}
+          <div className="flex items-center gap-0">
+            <Link to="/" aria-label="PSCyberCore home" className="lg:-ml-20 -my-2">
               <img
                 src={logo}
                 alt="PSCyberCore"
-                className="h-24 w-48 cursor-pointer object-contain transition-transform duration-300 hover:scale-105"
-                style={{ transform: "scale(2.0)", transformOrigin: "center center", pointerEvents: "none" }}
-                aria-label="PSCyberCore home"
+                className="h-32 w-64 object-contain cursor-pointer transition-transform duration-300 hover:scale-105"
               />
             </Link>
-
-            {/* Desktop MENU button — old style */}
             <button
-              className={`hidden lg:flex items-center gap-2 rounded-none border-0 px-5 py-2.5 text-sm font-bold uppercase tracking-wide text-cyber-red-foreground transition-colors ${
-                megaOpen ? "bg-cyber-red/85" : "bg-cyber-red hover:bg-cyber-red/85"
+              className={`-ml-4 flex items-center gap-2 rounded-md px-5 py-2.5 text-sm font-bold uppercase tracking-wide transition-colors ${
+                megaOpen ? "bg-primary/85 text-white" : "bg-primary text-white hover:bg-primary/85"
               }`}
               aria-expanded={megaOpen}
               aria-haspopup="true"
@@ -411,50 +396,38 @@ export function Navbar() {
                 className={`size-3.5 transition-transform duration-200 ${megaOpen ? "rotate-180" : ""}`}
               />
             </button>
-
-            {/* Mobile MENU button */}
-            <button
-              className="flex lg:hidden items-center gap-2 rounded-none border-0 bg-cyber-red px-4 py-2 text-xs font-bold uppercase tracking-wide text-cyber-red-foreground"
-              onClick={() => setMobileOpen(true)}
-              aria-label="Open navigation"
-            >
-              <Menu className="size-3.5" />
-              MENU
-            </button>
           </div>
 
-          {/* Right — CTA buttons */}
-          <div className="flex shrink-0 items-center gap-2" style={{ marginTop: "-1.5rem" }}>
-            {/* Desktop */}
-            <a
-              href="tel:+18258076307"
-              className="hidden lg:flex items-center gap-2 rounded-md border border-cyber-red px-4 py-2 text-sm font-semibold text-cyber-red hover:bg-cyber-red hover:text-white transition-colors"
-            >
-              <Phone className="size-4" />
-              +1 825 807 6307
-            </a>
+          {/* Right — CTA button */}
+          <div className="flex items-center gap-3">
             <Link
               to="/book-consultation"
-              className="hidden lg:flex items-center gap-2 rounded-md bg-cyber-navy px-5 py-2 text-sm font-bold text-cyber-navy-foreground hover:bg-cyber-navy/85 transition-colors"
+              className="flex items-center gap-2 rounded-md bg-primary px-6 py-2.5 text-sm font-semibold text-white hover:bg-primary/90 transition-colors"
             >
               Book Consultation
             </Link>
-
-            {/* Mobile */}
-            <a
-              href="tel:+18258076307"
-              className="flex lg:hidden items-center gap-1.5 rounded-md border border-cyber-red px-3 py-2 text-xs font-bold text-cyber-red whitespace-nowrap"
-            >
-              <Phone className="size-3.5 shrink-0" />
-              Call Us
-            </a>
-            <Link
-              to="/book-consultation"
-              className="flex lg:hidden items-center gap-1.5 rounded-md bg-cyber-navy px-3 py-2 text-xs font-bold text-cyber-navy-foreground whitespace-nowrap"
-            >
-              Consult
-            </Link>
           </div>
+        </div>
+
+        {/* Mobile Header */}
+        <div className="flex lg:hidden items-center justify-between px-4 py-0.5">
+          {/* Logo left */}
+          <Link to="/" aria-label="PSCyberCore home" className="-ml-16 -my-2">
+            <img
+              src={logo}
+              alt="PSCyberCore"
+              className="h-28 w-56 object-contain cursor-pointer"
+            />
+          </Link>
+
+          {/* Hamburger right */}
+          <button
+            onClick={() => setMobileOpen(true)}
+            aria-label="Open navigation"
+            className="rounded-md p-2 text-gray-600 hover:bg-gray-100"
+          >
+            <Menu className="size-6" />
+          </button>
         </div>
 
         {megaOpen && (
