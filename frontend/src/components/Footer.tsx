@@ -42,7 +42,7 @@ export function Footer() {
                 <Facebook className="h-4 w-4" />
               </a>
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/pscyber_core/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram"
