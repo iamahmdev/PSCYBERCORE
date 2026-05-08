@@ -1,5 +1,5 @@
 import { Link, useNavigate } from "react-router-dom";
-import { ChevronDown, ChevronRight, Menu, X, PhoneCall } from "lucide-react";
+import { ChevronRight, Menu, X, PhoneCall } from "lucide-react";
 import { useState, useRef, useEffect, type ReactNode } from "react";
 import logo from "@/assets/logo.png";
 
@@ -362,29 +362,25 @@ export function Navbar() {
       <header ref={headerRef} className="sticky top-0 z-40 border-b border-gray-200 bg-white">
         {/* Desktop Header */}
         <div className="hidden lg:flex mx-auto max-w-screen-2xl items-center justify-between px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16 py-0">
-          {/* Left — Logo + Menu button */}
+          {/* Left — Menu button + Logo */}
           <div className="flex items-center gap-0">
-            <Link to="/" aria-label="PSCyberCore home" className="lg:-ml-20 -my-6">
-              <img
-                src={logo}
-                alt="PSCyberCore"
-                className="h-44 w-88 object-contain cursor-pointer transition-transform duration-300 hover:scale-105"
-              />
-            </Link>
             <button
-              className={`-ml-4 flex items-center gap-2 rounded-md px-5 py-2.5 text-sm font-bold uppercase tracking-wide transition-colors ${
+              className={`relative z-10 flex items-center gap-2 rounded-md px-3 py-2.5 text-sm font-bold uppercase tracking-wide transition-colors ${
                 megaOpen ? "bg-primary/85 text-white" : "bg-primary text-white hover:bg-primary/85"
               }`}
               aria-expanded={megaOpen}
               aria-haspopup="true"
               onClick={() => setMegaOpen((v) => !v)}
             >
-              <Menu className="size-4" />
-              MENU
-              <ChevronDown
-                className={`size-3.5 transition-transform duration-200 ${megaOpen ? "rotate-180" : ""}`}
-              />
+              <Menu className="size-5" />
             </button>
+            <Link to="/" aria-label="PSCyberCore home" className="-ml-16 -my-6 relative z-0">
+              <img
+                src={logo}
+                alt="PSCyberCore"
+                className="h-32 w-64 object-contain cursor-pointer transition-transform duration-300 hover:scale-105"
+              />
+            </Link>
           </div>
 
           {/* Right — CTA button */}
@@ -401,7 +397,7 @@ export function Navbar() {
         {/* Mobile Header */}
         <div className="flex lg:hidden items-center justify-between px-4 py-0">
           {/* Logo left */}
-          <Link to="/" aria-label="PSCyberCore home" className="-ml-16 -my-5">
+          <Link to="/" aria-label="PSCyberCore home" className="-ml-24 -my-5">
             <img src={logo} alt="PSCyberCore" className="h-40 w-80 object-contain cursor-pointer" />
           </Link>
 
