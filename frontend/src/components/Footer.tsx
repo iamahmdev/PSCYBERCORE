@@ -20,12 +20,11 @@ export function Footer() {
 
           {/* Logo + tagline */}
           <div className="md:col-span-1">
-            {/* Logo with red glow — no bg, just drop-shadow in brand red */}
+            {/* Logo with same size as header */}
             <img
               src={logo}
               alt="PSCyberCore"
-              className="h-20 w-40 object-contain"
-              style={{ transform: "scale(1.75)", transformOrigin: "left center" }}
+              className="h-48 w-96 object-contain -ml-8"
             />
             <p className="mt-5 text-sm leading-relaxed text-gray-600">
               Automotive IT, cybersecurity and digital solutions for modern vehicle businesses.
@@ -34,7 +33,7 @@ export function Footer() {
             {/* Social icons */}
             <div className="mt-5 flex items-center gap-3">
               <a
-                href="https://facebook.com"
+                href="https://www.facebook.com/profile.php?id=61589245538262"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Facebook"

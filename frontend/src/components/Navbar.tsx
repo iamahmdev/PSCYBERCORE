@@ -1,11 +1,5 @@
 import { Link, useNavigate } from "react-router-dom";
-import {
-  ChevronDown,
-  ChevronRight,
-  Menu,
-  X,
-  PhoneCall,
-} from "lucide-react";
+import { ChevronDown, ChevronRight, Menu, X, PhoneCall } from "lucide-react";
 import { useState, useRef, useEffect, type ReactNode } from "react";
 import logo from "@/assets/logo.png";
 
@@ -86,20 +80,20 @@ const navCategories: NavCategory[] = [
     label: "Solutions",
     to: "/solutions",
     links: [
-      { label: "Automotive IT Solutions",         to: "/solutions#automotive-it" },
-      { label: "Fleet Technology & GPS Tracking",  to: "/solutions#fleet-technology" },
-      { label: "Cybersecurity Support",            to: "/solutions#cybersecurity" },
-      { label: "Custom Software Development",      to: "/solutions#custom-software" },
-      { label: "Website Development",              to: "/solutions#website-development" },
-      { label: "CRM & Booking Systems",            to: "/solutions#crm-booking" },
-      { label: "Business Process Automation",      to: "/solutions#automation" },
-      { label: "Data Reporting & Dashboards",      to: "/solutions#data-reporting" },
-      { label: "Cloud & IT Support",               to: "/solutions#cloud-it" },
-      { label: "CAD & 3D Modelling Support",       to: "/solutions#cad-3d" },
+      { label: "Automotive IT Solutions", to: "/solutions#automotive-it" },
+      { label: "Fleet Technology & GPS Tracking", to: "/solutions#fleet-technology" },
+      { label: "Cybersecurity Support", to: "/solutions#cybersecurity" },
+      { label: "Custom Software Development", to: "/solutions#custom-software" },
+      { label: "Website Development", to: "/solutions#website-development" },
+      { label: "CRM & Booking Systems", to: "/solutions#crm-booking" },
+      { label: "Business Process Automation", to: "/solutions#automation" },
+      { label: "Data Reporting & Dashboards", to: "/solutions#data-reporting" },
+      { label: "Cloud & IT Support", to: "/solutions#cloud-it" },
+      { label: "CAD & 3D Modelling Support", to: "/solutions#cad-3d" },
     ],
     mostRequested: [
-      { label: "Security Setup",    to: "/solutions#cybersecurity" },
-      { label: "Fleet Tracking",    to: "/solutions#fleet-technology" },
+      { label: "Security Setup", to: "/solutions#cybersecurity" },
+      { label: "Fleet Tracking", to: "/solutions#fleet-technology" },
       { label: "Book Consultation", to: "/book-consultation" },
     ],
   },
@@ -108,23 +102,23 @@ const navCategories: NavCategory[] = [
     label: "Industries",
     to: "/industries",
     links: [
-      { label: "Repair Shops",                   to: "/industries#repair-shops" },
-      { label: "Dealerships",                    to: "/industries#dealerships" },
-      { label: "Fleet Operators",                to: "/industries#fleet-operators" },
-      { label: "Transport Companies",            to: "/industries#transport-companies" },
-      { label: "Logistics Businesses",           to: "/industries#logistics-businesses" },
+      { label: "Repair Shops", to: "/industries#repair-shops" },
+      { label: "Dealerships", to: "/industries#dealerships" },
+      { label: "Fleet Operators", to: "/industries#fleet-operators" },
+      { label: "Transport Companies", to: "/industries#transport-companies" },
+      { label: "Logistics Businesses", to: "/industries#logistics-businesses" },
       { label: "Mobility & Automotive Startups", to: "/industries#mobility-startups" },
     ],
     mostRequested: [
-      { label: "Fleet Operators",  to: "/industries#fleet-operators" },
+      { label: "Fleet Operators", to: "/industries#fleet-operators" },
       { label: "Auto Dealerships", to: "/industries#dealerships" },
-      { label: "Get a Quote",      to: "/book-consultation" },
-      { label: "Contact Us",       to: "/contact" },
+      { label: "Get a Quote", to: "/book-consultation" },
+      { label: "Contact Us", to: "/contact" },
     ],
   },
   { id: "how-it-works", label: "How It Works", to: "/how-it-works" },
-  { id: "about",        label: "About",        to: "/about" },
-  { id: "contact",      label: "Contact",      to: "/contact" },
+  { id: "about", label: "About", to: "/about" },
+  { id: "contact", label: "Contact", to: "/contact" },
 ];
 
 // ─── Mega Menu ─────────────────────────────────────────────────────────────
@@ -133,9 +127,9 @@ function MegaMenu({ onClose }: { onClose: () => void }) {
   // null = no right panel (when How It Works / About / Contact is hovered)
   const [activeId, setActiveId] = useState<"solutions" | "industries" | null>(null);
 
-  const activeDropdown = navCategories.find(
-    (c) => c.id === activeId && isDropdown(c)
-  ) as DropdownCategory | undefined;
+  const activeDropdown = navCategories.find((c) => c.id === activeId && isDropdown(c)) as
+    | DropdownCategory
+    | undefined;
 
   function handleSimpleClick(cat: SimpleCategory) {
     onClose();
@@ -149,7 +143,6 @@ function MegaMenu({ onClose }: { onClose: () => void }) {
       style={{ top: "var(--header-height, 96px)" }}
     >
       <div className="flex" style={{ minHeight: 340 }}>
-
         {/* ── Left sidebar — all 5 items ── */}
         <div className="flex flex-col bg-cyber-navy" style={{ minWidth: 260, width: 260 }}>
           {navCategories.map((cat) => {
@@ -234,7 +227,6 @@ function MegaMenu({ onClose }: { onClose: () => void }) {
             </div>
           </div>
         )}
-
       </div>
     </div>
   );
@@ -247,9 +239,9 @@ function MobileMenu({ onClose }: { onClose: () => void }) {
   return (
     <div className="fixed inset-0 z-50 flex flex-col bg-white" style={{ overflowY: "auto" }}>
       {/* Header */}
-      <div className="flex items-center justify-between border-b border-gray-200 px-4 py-2">
-        <Link to="/" onClick={onClose} aria-label="PSCyberCore home" className="-ml-16">
-          <img src={logo} alt="PSCyberCore" className="h-28 w-56 object-contain" />
+      <div className="flex items-center justify-between border-b border-gray-200 px-4 py-0">
+        <Link to="/" onClick={onClose} aria-label="PSCyberCore home" className="-ml-16 -my-5">
+          <img src={logo} alt="PSCyberCore" className="h-40 w-80 object-contain" />
         </Link>
         <button
           onClick={onClose}
@@ -337,7 +329,7 @@ export function Navbar() {
     if (headerRef.current) {
       document.documentElement.style.setProperty(
         "--header-height",
-        `${headerRef.current.offsetHeight}px`
+        `${headerRef.current.offsetHeight}px`,
       );
     }
   });
@@ -367,19 +359,16 @@ export function Navbar() {
     <>
       {mobileOpen && <MobileMenu onClose={() => setMobileOpen(false)} />}
 
-      <header
-        ref={headerRef}
-        className="sticky top-0 z-40 border-b border-gray-200 bg-white"
-      >
+      <header ref={headerRef} className="sticky top-0 z-40 border-b border-gray-200 bg-white">
         {/* Desktop Header */}
-        <div className="hidden lg:flex mx-auto max-w-screen-2xl items-center justify-between px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16">
+        <div className="hidden lg:flex mx-auto max-w-screen-2xl items-center justify-between px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16 py-0">
           {/* Left — Logo + Menu button */}
           <div className="flex items-center gap-0">
-            <Link to="/" aria-label="PSCyberCore home" className="lg:-ml-20 -my-2">
+            <Link to="/" aria-label="PSCyberCore home" className="lg:-ml-20 -my-6">
               <img
                 src={logo}
                 alt="PSCyberCore"
-                className="h-32 w-64 object-contain cursor-pointer transition-transform duration-300 hover:scale-105"
+                className="h-44 w-88 object-contain cursor-pointer transition-transform duration-300 hover:scale-105"
               />
             </Link>
             <button
@@ -410,14 +399,10 @@ export function Navbar() {
         </div>
 
         {/* Mobile Header */}
-        <div className="flex lg:hidden items-center justify-between px-4 py-0.5">
+        <div className="flex lg:hidden items-center justify-between px-4 py-0">
           {/* Logo left */}
-          <Link to="/" aria-label="PSCyberCore home" className="-ml-16 -my-2">
-            <img
-              src={logo}
-              alt="PSCyberCore"
-              className="h-28 w-56 object-contain cursor-pointer"
-            />
+          <Link to="/" aria-label="PSCyberCore home" className="-ml-16 -my-5">
+            <img src={logo} alt="PSCyberCore" className="h-40 w-80 object-contain cursor-pointer" />
           </Link>
 
           {/* Hamburger right */}
@@ -430,9 +415,7 @@ export function Navbar() {
           </button>
         </div>
 
-        {megaOpen && (
-          <MegaMenu onClose={() => setMegaOpen(false)} />
-        )}
+        {megaOpen && <MegaMenu onClose={() => setMegaOpen(false)} />}
       </header>
     </>
   );
